@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة خيرية - GiveHope</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&family=Tajawal:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="HomePage.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <!---------------------------------------------------------------------------------------->
+
+    <section class="page-header">
+        <h1>معاً نصنع الأمل</h1>
+        <p>"مَّن ذَا ٱلَّذِى يُقْرِضُ ٱللَّهَ قَرْضًا حَسَنًا فَيُضَٰعِفَهُ لَهُۥٓ أَضْعَافًا كَثِيرَةً"</p>
+    </section>
+    
+    <!-- هيرو سيكشن متحرك -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>فرص التبرع</h1>
+            <p>منصة GiveHope تهدف إلى مساعدة المحتاجين وبناء مستقبل أفضل للمجتمع</p>
+            <div class="hero-buttons">
+                <a href="ShowAllCasess.html" class="All-donate-btn" style="background: transparent; border: 2px solid white;">الحالات الفرديه</a>
+                <a href="zakat.html" class="All-donate-btn" style="background: transparent; border: 2px solid white;">اخرج زكاه مالك</a>
+                <a href="sponsor.html" class="All-donate-btn" style="background: transparent; border: 2px solid white;">اكفل محتاجاً</a>
+                <a href="projects.html" class="All-donate-btn" style="background: transparent; border: 2px solid white;">ادعم المشاريع</a>
+                <a href="campaigns.html" class="All-donate-btn" style="background: transparent; border: 2px solid white;">ساعد في حملات التبرع</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- حالات عاجلة - سلايدر -->
+    <section class="urgent-cases-section">
+        <h2>حالات عاجلة تحتاج دعمك</h2>
+        <div id="urgentCasesContainerSwiper" class="swiper cases-slider">
+            <div class="swiper-wrapper cases-grid">
+                <!-- المحتوى سيتم إضافته عبر JavaScript -->
+            </div>
+            
+            <!-- أزرار التنقل -->
+            <div class="swiper-button-prev custom-prev">‹</div>
+            <div class="swiper-button-next custom-next">›</div>
+            
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    
+    <!-- إحصائيات المؤسسة -->
+    <section class="stats-section">
+        <div class="title" style="color: white; position: relative; z-index: 1;">
+            <h2>إنجازاتنا في أرقام</h2>
+        </div>
+        
+        <div class="stats-container">
+            <div class="stat-box">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h3>إجمالي التبرعات</h3>
+                <span class="stat-number">0+</span> <!-- سيتم تحديثه عبر JavaScript -->
+            </div>
+            
+            <div class="stat-box">
+                <i class="fas fa-users"></i>
+                 <h3>عدد عمليات التبرع</h3>
+                <span class="stat-number">0+</span> <!-- سيتم تحديثه عبر JavaScript -->
+            </div>
+            
+            <div class="stat-box">
+              <i class="fas fa-check-circle"></i> 
+            <h3>عدد الحالات المكتملة</h3>
+            <span class="stat-number">0+</span> <!-- سيتم تحديثه عبر JavaScript -->
+            </div>
+            
+            <div class="stat-box">
+                <i class="fas fa-heart"></i>
+                 <h3>عدد المتبرعين</h3>
+                 <span class="stat-number">0+</span> <!-- سيتم تحديثه عبر JavaScript -->
+            </div>
+        </div>
+    </section>
+    
+
+    
+      <!-- خدماتنا -->
+<section class="services-section">
+    <div class="section-title">
+        <h2>خدماتنا</h2>
+    </div>
+    
+    <!-- حاوية Swiper الرئيسية -->
+    <div class="swiper services-swiper">
+        <div class="swiper-wrapper">
+            <!-- كل service-card يصبح swiper-slide -->
+            <div class="swiper-slide">
+                <div class="service-card slide-up">
+                    <div class="service-icon">
+                          <i class="fas fa-tshirt"></i>
+                    </div>
+<h3>كسوة الأطفال</h3>
+                     <h4 style="color:black; margin-bottom: 10px;"> مساعده  معيشيه</h4>
+   <p>توفير الملابس الجديدة والموسمية للأطفال المحتاجين</p>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="service-card slide-up delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>دعم التعليم</h3>
+                    <h4 style="color:black; margin-bottom: 10px;"> مساعده تعليميه</h4>
+                    <p>نقدم كفالات دراسية ومساعدات لطلاب العلم المحتاجين</p>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="service-card slide-up delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>الرعاية الصحية</h3>
+                     <h4 style="color:black; margin-bottom: 10px;"> مساعده صحيه</h4>
+                    <p>نساهم في علاج المرضى وتوفير الأدوية والعمليات الجراحية</p>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="service-card slide-up delay-3">
+                    <div class="service-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>رعاية الأيتام</h3>
+                     <h4 style="color:black; margin-bottom: 10px;"> مساعده رعايه الأيتام</h4>
+                    <p>نوفر الرعاية الشاملة للأيتام ونضمن لهم حياة كريمة</p>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="service-card slide-up">
+                    <div class="service-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>كفالات متنوعة</h3>
+                     <h4 style="color:black; margin-bottom: 10px;"> قسم الكفالات </h4>
+                    <p>تتيح الجمعية برامج كفالة متعددة في المجالات التعليمية والصحية وغيرها</p>
+                </div>
+            </div>
+            
+              <div class="swiper-slide">
+                <div class="service-card slide-up delay-1">
+                    <div class="service-icon">
+<i class="fas fa-box"></i>
+                 </div>
+                    <h3>سلال غذائية</h3>
+                     <h4 style="color:black; margin-bottom: 10px;"> قسم حملات التبرع </h4>
+                    <p>نسعى لتخفيف أعباء المعيشة عن الأسر الأكثر احتياجًا عن طريق توزيع سلال غذائيه</p>
+                </div>
+            </div>  
+            
+           
+            
+            <div class="swiper-slide">
+                <div class="service-card slide-up delay-3">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>تسديد الديون</h3>
+                     <h4 style="color:black; margin-bottom: 10px;"> مساعده معيشيه</h4>
+                    <p>مساعدة المعسرين في سداد ديونهم وإعادة بناء حياتهم</p>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="service-card slide-up">
+                    <div class="service-icon">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <h3>مشاريع زكاة</h3>
+                     <h4 style="color:black; margin-bottom: 10px;"> قسم زكاة المال </h4>
+                    <p>توزيع الزكاة على مستحقيها وفق الضوابط الشرعية</p>
+                </div>
+            </div>
+
+            
+            <div class="swiper-slide">
+                <div class="service-card slide-up delay-1">
+                    <div class="service-icon">
+<i class="fas fa-utensils"></i>                    </div>
+                    <h3> افطار صائمين</h3>
+                     <h4 style="color:black; margin-bottom: 10px;"> قسم حملات التبرع </h4>
+                    <p>توزيع فطور  للعائلات المحتاجه في الشهر المبارك  </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="service-card slide-up delay-1">
+                    <div class="service-icon">
+<i class="fas fa-tent"></i>                    </div>
+                    <h3>  مساعدات سكن وإيواء </h3>
+                     <h4 style="color:black; margin-bottom: 10px;">   قسم الطوارئ   </h4>
+                    <p> مسكن مؤقت لعائله نازحه من بيتها  </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- أزرار التنقل -->
+        <div class="swiper-button-prev custom-prev">‹</div>
+        <div class="swiper-button-next custom-next">›</div>
+        
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+
+
+
+    <!-- قصص النجاح -->
+    <section class="testimonials-section">
+        <div class="story-title" style="color: rgba(255, 255, 255, 0.014); position: relative; z-index: 1;">
+            <h2>قصص النجاح</h2>
+        </div>
+        
+        <div class="testimonials-container" style="color:black;">
+            <div class="swiper testimonials-swiper">
+                <div class="swiper-wrapper">
+                    <!-- المحتوى سيتم إضافته عبر JavaScript -->
+                </div>
+                
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- دعوة للتبرع -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="slide-up">كن جزءاً من صناعة الأمل</h2>
+            <p class="slide-up delay-1">بكل تبرع تقوم به، أنت لا تساعد شخصاً محتاجاً فحسب، بل تشارك في بناء مجتمع أفضل للجميع</p>
+            <div class="cta-buttons slide-up delay-2">
+                <a href="stories.html" class="cta-btn cta-btn-primary">اطلع على الأثر</a>
+                <button type="button" class="cta-btn cta-btn-secondary" id="shareBtn">
+                    شارك الأمل 
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal المشاركة -->
+    <div class="modal" id="shareModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">شارك رابط موقعنا  🌸</h5>
+                <button type="button" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">اختر طريقة المشاركة:</p>
+                <div class="social-share-icons">
+                    <a href="#" id="whatsapp-share" class="share-icon whatsapp-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" id="facebook-share" class="share-icon facebook-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" id="copy-link" class="share-icon copy-icon">
+                        <i class="fas fa-link"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast الإشعار -->
+    <div class="toast-container">
+        <div id="copyToast" class="toast">
+            <i class="fas fa-check-circle" style="color: #25D366;"></i>
+            تم نسخ الرابط بنجاح! ✔️
+        </div>
+    </div>
+ 
+</html>
+
+<!-----------------------------------------chatbot----------------------------------------------------->
+
+
+<!-- شات بوت محسن بدون إدخال نص -->
+<div class="chatbot-container">
+    <div class="chatbot-icon" onclick="toggleChat()">
+        <i class="fas fa-hands-helping"></i>
+    </div>
+    
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <h3><i class="fas fa-robot"></i> مساعد GiveHope</h3>
+            <button class="chatbot-close" onclick="toggleChat()">×</button>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chatbot-message bot-message">
+                مرحبًا! 👋 أنا مساعد GiveHope، كيف يمكنني مساعدتك اليوم؟
+            </div>
+            <div class="chatbot-message bot-message">
+                يمكنك اختيار أحد الأسئلة الشائعة من القائمة بالأسفل.
+            </div>
+        </div>
+
+        <div class="typing-indicator" id="typingIndicator">
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+        </div>
+
+        <div class="quick-replies">
+            <button onclick="sendQuickReply('ما هي GiveHope؟')"><i class="fas fa-hand-holding-heart"></i>ما هي GiveHope</button>
+            <button onclick="sendQuickReply('هل يمكنني التبرع بطرق غير مادية؟')"><i class="fas fa-shield-alt"></i>  التبرع الغير مادي</button>
+            <button onclick="sendQuickReply('هل يجب أن أسجل حساب للتبرع؟')"><i class="fas fa-check-circle"></i>  انشاء حساب</button>
+            <button onclick="sendQuickReply('ما الفرق بين خدماتكم؟')"><i class="fas fa-check-circle"></i>   ما الفرق بين خدماتكم؟</button>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<!---------------------------------------------------------------------------------------------->
+   
+    <div id="footer-placeholder"></div>
+
+    <!-- الترتيب الصحيح لتحميل السكربتات -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- السكربتات الخاصة بك -->
+    <script src="HomePage.js"></script>
+    <script src="js/script.js"></script>
+    
+</body>

@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> تبرع الآن - GiveHope</title>
+       <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&family=Tajawal:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="DonateNow.css">
+</head>
+<body>
+   <div id="navbar-placeholder"></div>
+
+    <section class="page-header">
+        <h1>تبرع الآن</h1>
+        <p>﴿ وَأَحْسِنُوٓا۟ ۛ إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُحْسِنِينَ﴾</p>
+    </section>
+
+
+
+    <div class="container"> 
+    <a id="backButton" class="back-button" href="casedetails.html">
+        <i class="fas fa-arrow-right"></i> الذهاب الى صفحة التفاصيل 
+    </a>
+    <div class="case-info">
+        <i class="fas fa-hand-holding-heart"></i>
+        <p class="case-title" id="caseTitle">جارٍ تحميل معلومات الحالة...</p>
+    </div>
+
+    <!-- تم إضافة form هنا -->
+    <form id="donationForm">
+        <div class="donation-form-wrapper">
+            <div class="donation-details-column">
+                <h3 class="section-title">مبلغ التبرع</h3>
+                <div class="amount-buttons">
+                    <button type="button" data-amount="50">50</button>
+                    <button type="button" data-amount="100">100</button>
+                    <button type="button" data-amount="200">200</button>
+                    <button type="button" data-amount="500">500</button>
+                    <button type="button" data-amount="custom">مخصص</button>
+                </div>
+                <input type="number" id="custom-amount" placeholder="أدخل المبلغ المطلوب" style="display:none;">
+
+                <label for="currency">اختر العملة</label>
+                <select id="currency">
+                    <option value="ILS">شيكل إسرائيلي (₪)</option>
+                    <option value="USD">دولار أمريكي ($)</option>
+                    <option value="JOD">دينار أردني (د.أ)</option>
+                    <option value="AED">درهم إماراتي (د.إ)</option>
+                </select>
+
+                <h3 class="section-title">طرق الدفع</h3>
+                <div class="payment-methods">
+                    <input type="radio" id="card" name="payment" value="card" hidden>
+                    <label for="card"><img src="https://img.icons8.com/color/48/000000/bank-card-back-side.png"/> بطاقة بنكية</label>
+                    
+                    <input type="radio" id="paypal" name="payment" value="paypal" hidden>
+                    <label for="paypal"><img src="https://img.icons8.com/color/48/000000/paypal.png"/> باي بال</label>
+                    
+                    <input type="radio" id="wallet" name="payment" value="wallet" hidden>
+                    <label for="wallet"><img src="https://img.icons8.com/color/48/000000/wallet.png"/> محفظة إلكترونية</label>
+                    
+                    <input type="radio" id="transfer" name="payment" value="transfer" hidden>
+                    <label for="transfer"><img src="https://img.icons8.com/color/48/000000/money-transfer.png"/> حوالة بنكية</label>
+                </div>
+            </div>
+
+            <div class="donor-info-column">
+                <h3 class="section-title">المعلومات الشخصية</h3>
+                <label for="name">الاسم الكامل</label>
+                <input type="text" id="name" autocomplete="name" placeholder="أدخل اسمك بالكامل" required>
+
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" autocomplete="email" placeholder="example@gmail.com"
+                   pattern="^[^@\s]+@[^@\s]+\.com$" 
+                 title="الرجاء إدخال بريد إلكتروني صالح مثل example@gmail.com"
+                 required>
+
+                <label for="phone">رقم الهاتف</label>
+                <input type="tel" id="phone" autocomplete="tel" placeholder="059123456" 
+                 title="الرجاء إدخال أرقام فقط" pattern="[0-9]+"  required>
+
+                <label for="idcard">رقم الهوية</label>
+                <input type="tel" id="idcard" placeholder="رقم الهوية" 
+                 title="الرجاء إدخال أرقام فقط"  pattern="[0-9]+" required >
+
+                <div class="checkbox-inline">
+                    <input type="checkbox" id="anonymous" >
+                    <label for="anonymous" class="mylabel">التبرع بشكل مجهول</label>
+                </div>
+                
+                  <!-- مؤشر التبرعات -->
+       <div class="progress-container">
+            <div class="progress-info">
+                <span id="totalAmount">₪</span>
+                <span id="donatedAmount">₪</span>
+            </div>
+            <div class="progress-wrapper">
+                <div class="progress-bar" id="progressBar" style="width: 0%;">
+                    <div class="progress-text" id="progressText"></div>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 0.9rem; color: var(--gray);">
+                ساعدنا في الوصول إلى الهدف!
+            </div>
+        </div>
+
+
+
+            </div>
+        </div>
+
+        <button class="cta-button" id="donate-btn" type="submit">
+            <i class="fas fa-heart"></i> تبرع الآن
+        </button>
+    </form>
+
+        <div class="security">
+            <i class="fas fa-shield-alt"></i> 🔒 جميع بياناتك محمية | بوابة دفع آمنة
+        </div>
+
+        <div class="thank-message" id="thankMessage" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            <h3>شكراً لتبرعك الكريم!</h3>
+            <p>سيتم إرسال إيصال التبرع إلى بريدك الإلكتروني خلال دقائق.</p>
+        </div>
+
+        <div class="privacy-link">
+            <a href="#"><i class="fas fa-lock"></i> سياسة الاستخدام والخصوصية</a>
+        </div>
+    </div>
+
+    <div class="floating-icon">
+        <i class="fas fa-hands-helping"></i>
+    </div>
+
+
+
+
+
+
+
+  
+     <div class="chatbot-container">
+    <div class="chatbot-icon" onclick="toggleChat()">
+        <i class="fas fa-hands-helping"></i>
+    </div>
+    
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <h3><i class="fas fa-robot"></i> مساعد GiveHope</h3>
+            <button class="chatbot-close" onclick="toggleChat()">×</button>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chatbot-message bot-message">
+                مرحبًا! 👋 أنا مساعد GiveHope، كيف يمكنني مساعدتك اليوم؟
+            </div>
+            <div class="chatbot-message bot-message">
+                يمكنك اختيار أحد الأسئلة السريعة بالأسفل أو كتابة سؤالك الخاص.
+            </div>
+        </div>
+
+        <div class="typing-indicator" id="typingIndicator">
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+        </div>
+
+        <div class="quick-replies">
+
+<button onclick="sendQuickReply('كيف أتبرع؟')"><i class="fas fa-hand-holding-heart"></i> كيف أتبرع؟</button>
+<button onclick="sendQuickReply('   طريقه الدفع؟' )"><i class="fas fa-people-arrows"></i>   طريقه الدفع؟ </button>
+<button onclick="sendQuickReply(' كم المبلغ؟')"><i class="fas fa-eye"></i> كم المبلغ؟</button>
+<button onclick="sendQuickReply('  التبرع من مجهول ؟')"><i class="fas fa-user-secret"></i> التبرع من مجهول ؟</button>
+
+</div>
+
+       
+    </div>
+</div>
+
+
+
+
+    <div id="footer-placeholder"></div>
+    <script src="DonateNow.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

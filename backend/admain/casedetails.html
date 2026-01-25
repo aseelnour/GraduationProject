@@ -1,0 +1,196 @@
+
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل الحالة - GiveHope</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="casedetails.css">
+   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  
+</head>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل الحالة - GiveHope</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="casedetails.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <section class="page-header">
+        <h1>تفاصيل الحاله</h1>
+        <p> ﴿ إِن تُقْرِضُوا اللَّهَ قَرْضًا حَسَنًا يُضَاعِفْهُ لَكُمْ وَيَغْفِرْ لَكُمْ ﴾ </p>
+    </section>
+
+    <div class="container">
+        <a href="ShowAllCasess.html" class="back-button">
+            <i class="fas fa-arrow-right"></i> العودة إلى القائمة
+        </a>
+        
+        <div class="case-details">
+            <div class="decorative-element"></div>
+            <div class="decorative-element-2"></div>
+            
+            <div class="case-content">
+                <div class="case-left"> 
+                    <h1 class="case-title" id="caseTitle"></h1>
+                    <!-- <div id="urgentBadge" class="urgent-badge" style="display: none;">عاجل</div> -->
+
+                    <img id="caseImage" alt="صورة الحالة" class="case-image floating">
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progressBar">
+                            <div class="progress-text" id="progressText"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <div class="detail-label">المبلغ المطلوب</div>
+                            <div class="detail-value" id="totalAmount"></div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">المبلغ المجموع</div>
+                            <div class="detail-value" id="donatedAmount"></div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">المبلغ المتبقي</div>
+                            <div class="detail-value" id="remainingAmount"></div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">عدد عمليات التبرع</div>
+                            <div class="detail-value" id="donationsCount"></div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">تاريخ النشر</div>
+                            <div class="detail-value" id="publishDate"></div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">آخر موعد للتبرع</div>
+                            <div class="detail-value" id="deadline"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-right">
+                    <div class="case-description">
+                         <p id="caseDescription"></p>
+                    </div>
+                    
+                    <div class="donors-section">
+                        <div class="donors-row">
+                            <div class="donor-card">
+                                <h3 class="donors-title"></h3>
+                                <div class="donor-amount" id="otherDescription"></div>
+                            </div>
+                            
+                            <div class="donor-card">
+                                <h3 class="donors-title">نوع الحالة</h3>
+                                <div class="donor-amount" id="caseType"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="donate-section">
+                        <a href="DonateNow.html" class="donate-button">تبرع الآن</a> 
+                        <button type="button" class="donate-button share-button" id="shareBtn" data-bs-toggle="modal" data-bs-target="#shareModal">
+                            مشاركة الحالة
+                        </button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content border-0 shadow-lg rounded-4">
+                                <div class="modal-header d-flex justify-content-between align-items-center p-3 border-bottom-0">
+                                    <h5 class="modal-title fs-5 fw-bold text-center w-100" id="shareModalLabel">شارك هذه الحالة 🌸</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body p-4 text-center">
+                                    <p class="text-muted mb-4">اختر طريقة المشاركة التي تفضلها:</p>
+                                    <div class="d-flex justify-content-center gap-4 social-share-icons flex-wrap">
+                                        <a href="#" id="whatsapp-share" class="share-icon whatsapp-icon" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="مشاركة عبر واتساب">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                        <a href="#" id="facebook-share" class="share-icon facebook-icon" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="مشاركة عبر فيسبوك">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#" id="copy-link" class="share-icon copy-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="نسخ الرابط">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Toast -->
+                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                        <div id="copyToast" class="toast border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-body">
+                                تم نسخ رابط الحالة شاركه مع من تحب!✔️
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-icon" onclick="toggleChat()">
+            <i class="fas fa-hands-helping"></i>
+        </div>
+        
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h3><i class="fas fa-robot"></i> مساعد GiveHope</h3>
+                <button class="chatbot-close" onclick="toggleChat()">×</button>
+            </div>
+            <div class="chatbot-body" id="chatbotBody">
+                <div class="chatbot-message bot-message">
+                    مرحبًا! 👋 أنا مساعد GiveHope، كيف يمكنني مساعدتك اليوم؟
+                </div>
+                <div class="chatbot-message bot-message">
+                    يمكنك اختيار أحد الأسئلة السريعة بالأسفل أو كتابة سؤالك الخاص.
+                </div>
+            </div>
+
+            <div class="typing-indicator" id="typingIndicator">
+                <span class="typing-dot"></span>
+                <span class="typing-dot"></span>
+                <span class="typing-dot"></span>
+            </div>
+
+            <div class="quick-replies">
+                <button onclick="sendQuickReply('كيف أتبرع؟')"><i class="fas fa-hand-holding-heart"></i> كيف أتبرع؟</button>
+                <button onclick="sendQuickReply('هل المبلغ يصل مباشرة للمستفيد؟')"><i class="fas fa-people-arrows"></i> المبلغ يصل مباشرة؟</button>
+                <button onclick="sendQuickReply('هل عملية التبرع تجري بشفافية؟')"><i class="fas fa-eye"></i> التبرع بشفافية؟</button>
+                <button onclick="sendQuickReply('هل عملية التبرع تحدث بسرية تامة؟')"><i class="fas fa-user-secret"></i> التبرع بسرية؟</button>
+                <button onclick="sendQuickReply('هل التبرع آمن؟')"><i class="fas fa-shield-alt"></i> التبرع آمن؟</button>
+                <button onclick="sendQuickReply('شو بصير إذا اكتمل المبلغ؟')"><i class="fas fa-check-circle"></i> اكتمال المبلغ؟</button>
+                <button onclick="sendQuickReply('هل أقدر أتبرع بمبلغ صغير؟')"><i class="fas fa-coins"></i> مبلغ التبرع؟</button>
+                <button onclick="sendQuickReply('كيف أتأكد من صحة الحالة؟')"><i class="fas fa-clipboard-check"></i> صحة الحالة؟</button>
+                <button onclick="sendQuickReply('هل يمكنني التبرع بشكل مجهول؟')"><i class="fas fa-incognito"></i> التبرع مجهول؟</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="casedetails.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

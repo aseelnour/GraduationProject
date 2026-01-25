@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة خيرية - GiveHope</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&family=Tajawal:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="stylesheet" href="ShowAllCasess.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+   <main>
+        <section class="page-header">
+            <h1>الحالات المتاحة للتبرع</h1>
+            <p>ساهم في صنع الأمل ومساعدة المحتاجين من خلال التبرع لإحدى الحالات التالية</p>
+        </section>
+        
+        <!-- Filters and Sorting -->
+        <div class="controls-container">
+            <div class="filter-group">
+                <h3>تصفية حسب النوع</h3>
+                <div class="filter-options">
+                    <button class="filter-btn active" data-filter="all">الكل</button>
+                    <button class="filter-btn" data-filter="education">التعليم</button>
+                    <button class="filter-btn" data-filter="health">الصحة</button>
+                    <button class="filter-btn" data-filter="living">المعيشة</button>
+                    <button class="filter-btn" data-filter="sponsoring">الكفالة</button>
+                    <button class="filter-btn" data-filter="emergency">الطوارئ</button>
+                    <button class="filter-btn" data-filter="other">أخرى</button>
+                </div>
+            </div>
+            
+            <div class="sort-group">
+                <h3>ترتيب حسب</h3>
+                <div class="sort-options">
+                    <button class="sort-btn active" data-sort="default">الأحدث</button>
+                    <button class="sort-btn" data-sort="urgent">الأكثر إلحاحاً</button>
+                    <button class="sort-btn" data-sort="remaining">المتبقي قليل</button>
+                </div>
+            </div>
+            
+            <div class="search-box">
+                <input type="text" placeholder="ابحث عن حالة...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+        
+        <!-- Cases Container -->
+        <div class="cases-container"  id="casesContainer">
+           
+
+
+        </div>
+    </main>
+
+
+
+<!-- شات بوت محسن بدون إدخال نص -->
+<div class="chatbot-container">
+    <div class="chatbot-icon" onclick="toggleChat()">
+        <i class="fas fa-hands-helping"></i>
+    </div>
+    
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <h3><i class="fas fa-robot"></i> مساعد GiveHope</h3>
+            <button class="chatbot-close" onclick="toggleChat()">×</button>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chatbot-message bot-message">
+                مرحبًا! 👋 أنا مساعد GiveHope، كيف يمكنني مساعدتك اليوم؟
+            </div>
+            <div class="chatbot-message bot-message">
+                يمكنك اختيار أحد الأسئلة الشائعة من القائمة بالأسفل.
+            </div>
+        </div>
+
+        <div class="typing-indicator" id="typingIndicator">
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+        </div>
+
+        <div class="quick-replies">
+            <button onclick="sendQuickReply('كيف أتبرع؟')"><i class="fas fa-hand-holding-heart"></i> كيف أتبرع؟</button>
+            <button onclick="sendQuickReply('ما هي طرق الدفع المتاحة؟')"><i class="fas fa-credit-card"></i> طرق الدفع</button>
+            <button onclick="sendQuickReply('هل التبرع آمن؟')"><i class="fas fa-shield-alt"></i> أمان التبرع</button>
+            <button onclick="sendQuickReply('كيف أتأكد من وصول تبرعي؟')"><i class="fas fa-check-circle"></i> متابعة التبرع</button>
+            <button onclick="sendQuickReply('كيف يتم استخدام تبرعاتي؟')"><i class="fas fa-shield-alt"></i>  استخدام التبرعات</button>
+            <button onclick="sendQuickReply('ماذا لو حدث خطأ أثناء عملية التبرع؟')"><i class="fas fa-shield-alt"></i>  لو حدث خطا </button>
+           
+        </div>
+    </div>
+</div>
+
+
+
+
+    <div id="footer-placeholder"></div>
+   
+<script src="ShowAllCasess.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
